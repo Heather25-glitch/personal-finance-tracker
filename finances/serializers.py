@@ -4,12 +4,12 @@ from .models import Income, Expense, SavingsGoal
 from rest_framework import serializers
 from .models import Income
 
+
 class IncomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Income
-        fields = ['amount', 'source', 'date', 'user']
-        read_only_fields = ['user']
-
+        fields = ['id', 'amount', 'source', 'date', 'user']  # Ensure 'id' is included
+        read_only_fields = ['id', 'user']  # Make 'id' and 'user' read-only
 
 class ExpenseSerializer(serializers.ModelSerializer):
     class Meta:

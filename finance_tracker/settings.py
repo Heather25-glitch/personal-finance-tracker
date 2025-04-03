@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'finances',
     'rest_framework_simplejwt',
+    'django_filters',
 ]
 
 REST_FRAMEWORK = {
